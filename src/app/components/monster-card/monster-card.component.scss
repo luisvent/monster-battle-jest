@@ -1,0 +1,39 @@
+@import "../../../styles/variables";
+
+:host {
+    display: inline-flex;
+}
+.mat-card-image {
+    width: 100%;
+    margin: 0;
+    display: block;
+    overflow: hidden;
+}
+.mat-card-image:first-child {
+    margin-top: 0;
+}
+.image {
+    width: 136px;
+    height: 99px;
+    border-radius: 7px;
+}
+.card-monster {
+    width: 150px;
+    height: 139px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 7px;
+    padding: 7px !important;
+    box-shadow: $box-shadow;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+.card-monster p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 7px;
+}

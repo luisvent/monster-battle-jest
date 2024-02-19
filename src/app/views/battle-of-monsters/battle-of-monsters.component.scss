@@ -1,0 +1,39 @@
+@import "../../../styles/variables";
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin: 0 auto;
+    max-width: 814px;
+}
+.battle-section {
+    display: grid;
+    align-items: center;
+    gap: 25px;
+    grid-template-columns: 1fr 150px 1fr;
+}
+.main-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+}
+.active {
+    background-color: #10782e !important;
+}
+.inactive {
+    background-color: #799a82 !important;
+}
+.start-battle-button {
+    color: white !important;
+    font-family: $font-family-root !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    line-height: 21px !important;
+    text-transform: capitalize !important;
+    padding: 12px 30px!important;
+    box-shadow: $box-shadow-button;
+    pointer-events: visible !important;
+}

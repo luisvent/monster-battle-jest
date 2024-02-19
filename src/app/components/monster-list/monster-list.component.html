@@ -1,0 +1,12 @@
+<div>
+    <span *ngIf="monsters$ | async as monsters" class="title-select-monster">
+        {{
+        monsters.length > 0 ? "Select your monster" : "No monsters available"
+        }}
+    </span>
+
+    <div class="list-monsters">
+        <app-monster-card *ngFor="let monster of monsters$ | async" [monster]="monster"
+            ></app-monster-card>
+    </div>
+</div>

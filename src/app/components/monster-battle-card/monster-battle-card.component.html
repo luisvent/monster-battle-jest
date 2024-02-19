@@ -1,0 +1,33 @@
+<div>
+    <mat-card class="battle-card-player centralized">
+        <div class="empty-card" *ngIf="!monster; else monsterInfoTemplate">
+          {{title}}
+        </div>
+    </mat-card>
+</div>
+
+<ng-template #monsterInfoTemplate>
+  <img mat-card-image [src]="monster?.imageUrl" class="image" />
+
+  <div class="title">
+    {{monster?.name}}
+  </div>
+
+  <div class="stats-info">
+    <mat-divider>
+    </mat-divider>
+
+    <ul class="stats-list">
+      <li *ngFor="let stat of stats; let i = index">
+        <app-monster-stat
+        [name]="stat.name"
+        [value]="stat.value"
+        [position]="i"
+        >
+
+        </app-monster-stat>
+      </li>
+    </ul>
+
+  </div>
+</ng-template>

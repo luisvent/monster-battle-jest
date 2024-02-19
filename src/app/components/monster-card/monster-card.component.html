@@ -1,0 +1,6 @@
+<mat-card class="card-monster" [ngStyle]="{
+  'border': (monsterSelectedId$ | async) === monster?.id ? '1px solid black' : 'none'
+}" (click)="handleMonsterClick(monster)">
+    <img mat-card-image [src]="monster?.imageUrl" class="image" />
+    <p>{{ monster?.name }}</p>
+</mat-card>

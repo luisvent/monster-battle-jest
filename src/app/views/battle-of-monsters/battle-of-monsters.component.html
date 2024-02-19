@@ -1,0 +1,22 @@
+<div class="main-section">
+    <span class="main-title">Battle of Monsters</span>
+
+    <app-monster-list></app-monster-list>
+
+  <app-winner-display *ngIf="battleWinner" [message]="battleWinner.winner.name">
+
+  </app-winner-display>
+
+    <div class="battle-section">
+        <app-monster-battle-card [monster]="player" [title]="player?player.name:'Player'"></app-monster-battle-card>
+
+        <button mat-button class="start-battle-button" [disabled]="!player" [class.active]="player"
+                (click)="startBattle()"
+            [class.inactive]="!player">
+            Start Battle
+        </button>
+
+        <app-monster-battle-card [monster]="computer" [title]="computer? computer.name : 'Computer'">
+        </app-monster-battle-card>
+    </div>
+</div>

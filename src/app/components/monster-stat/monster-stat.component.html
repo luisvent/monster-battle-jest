@@ -1,0 +1,8 @@
+<div class="stat-container">
+  <div class="stat-title-container">
+    {{name | titlecase}}
+  </div>
+  <div class="stat-bar-container" [ngClass]="{'first-stat': position === 0}">
+    <mat-progress-bar mode="determinate" [value]="value" class="stat-bar"></mat-progress-bar>
+  </div>
+</div>
